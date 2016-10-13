@@ -1,0 +1,63 @@
+---
+title: "My Shiny App Documentation"
+author: "Yuva"
+date: "October 3, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+User documentation
+====================
+
+# The app is built following a step by step guide provided in the website
+* [Here] (www.deanattali.com/blog/building-shiny-apps-tutorial/)
+
+# load the dataset
+## The link to the dataset can be found
+* [Here] (www.deanattali.com/files/bcl-data.csv) 
+
+The dataset we'll be using contains information about all the products sold by BC Liquor Store and is provided by OpenDataBC. They provide a direct link to download a csv version of the data, and this data has the rare quality that it is immediately clean and useful.
+
+# Add Inputs
+
+## Input for price 
+
+The first input we want to have is for specifying a price range (minimum and maximum price). The most sensible types of input for this are either numericInput() or sliderInput() since they are both used for selecting numbers. If we use numericInput(), we'd have to use two inputs, one for the minimum value and one for the maximum. 
+
+We choose $100 as our maximum value as 85% of the product price is below the max price. The slider is set between $25 and $40
+
+#Input for product type 
+
+Usually when going to the liquor store you know whether you're looking for beer or wine, and you don't want to waste your time in the wrong section. The same is true in our app, we should be able to choose what type of product we want.
+
+We have used radio button to choose between 'Beer', 'wine', 'refreshment',and 'spirits'. Wine is selected by defaults.
+
+#Input for country
+
+The app allows to search product by country. We have given theree options ie users can select between the products from Canada, France and Italy.
+
+#Output
+The output from the apps will be displaced in a histogram and is tablulated just below the histogram by filling  appropriate input parameter
+
+#How to use the app
+
+* User can first select the range of price that they are intersted in.
+* User then select the type of product from the radio botton
+* The products can then be filtered with the availabel country from the dropdown    menu in the left hand side (input panel)
+* Results are displayed in the right side (output panel).The Histogram in the       shows the available beverage catagorized with alcohal percentage
+* The table then tabulates all the available beverages that is defined in the
+  input panel.
+  
+#This is a very simple app that helps finding the availabilty of prefered         alcoholic beverage in the shop
+
+Thank you
+===========
+
+
+
+
+
+
